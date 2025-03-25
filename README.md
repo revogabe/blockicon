@@ -1,58 +1,17 @@
-# React + TypeScript + Vite
+## BlockIcon 🚀✨  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BlockIcon is an open-source library designed to make it easy to integrate cryptocurrency icons into websites and applications. Our goal is to provide a comprehensive and up-to-date set of icons for developers working with blockchain, exchanges, wallets, and other crypto platforms.  
 
-Currently, two official plugins are available:
+### 🔥 What We Offer  
+✅ Ready-to-use cryptocurrency icons  
+✅ Lightweight and easy-to-integrate library  
+✅ Frequent updates with new icons  
+✅ Open-source and free for the community  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 💡 How to Contribute?  
+We’re building BlockIcon with the community! If you’d like to contribute with icons, improvements, or suggestions, feel free to open a PR or issue.  
 
-## Expanding the ESLint configuration
+### 🎉 Become a Sponsor!  
+If you have a website or project that needs crypto icons and want to be one of our first sponsors, reach out for exclusive support!  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# blockicon
-# blockicon
-# blockicon
-# blockicon
+📌 Stay tuned for more updates! 🚀
