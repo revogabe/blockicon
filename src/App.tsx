@@ -4,7 +4,7 @@ import { BlockIcon } from "./components/blockicon";
 function App() {
   return (
     <>
-      <BlockIcon />
+      <BlockIcon alias="bitcoin" theme="light" size="xl" />
     </>
   );
 }

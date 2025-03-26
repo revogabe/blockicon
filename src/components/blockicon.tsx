@@ -2,18 +2,21 @@ import { ComponentProps } from "react";
 import { tv, VariantProps } from "tailwind-variants";
 import { cn } from "../utils/cn";
 
+const BASE_URL =
+  "https://blockicon-bucket.s3.us-west-1.amazonaws.com/blockicon/pre-alpha";
+
 const iconVariants = tv({
-  base: "size-10",
+  base: "flex items-center justify-center flex-shrink-0 object-contain overflow-clip",
   variants: {
     shape: {
-      square: "block-icon-square",
-      circle: "block-icon-circle",
+      square: "rounded-md",
+      circle: "rounded-full",
     },
     size: {
-      sm: "block-icon-sm",
-      md: "block-icon-md",
-      lg: "block-icon-lg",
-      xl: "block-icon-xl",
+      sm: "size-4",
+      md: "size-6",
+      lg: "size-8",
+      xl: "size-10",
     },
   },
   defaultVariants: {
@@ -25,16 +28,19 @@ const iconVariants = tv({
 type ImageProps = ComponentProps<"img">;
 type IconVariants = VariantProps<typeof iconVariants>;
 
-interface BlockIconProps extends ImageProps, IconVariants {}
+interface BlockIconProps extends ImageProps, IconVariants {
+  alias: string;
+  theme: "original" | "dark" | "light";
+}
 
 export const BlockIcon = (props: BlockIconProps) => {
-  const { shape, size, className, ...iconProps } = props;
+  const { alias, shape, size, className, ...iconProps } = props;
 
   return (
     <img
       {...iconProps}
-      src="https://assets.coingecko.com/coins/images/1/standard/bitcoin.png?1696501400"
-      alt="Icon"
+      src={`${BASE_URL}/${props.theme}/${alias}.svg`}
+      alt={`${alias} icon`}
       className={cn(iconVariants({ shape, size }), className)}
     />
   );
