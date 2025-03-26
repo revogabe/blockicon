@@ -29,18 +29,26 @@ type ImageProps = ComponentProps<"img">;
 type IconVariants = VariantProps<typeof iconVariants>;
 
 interface BlockIconProps extends ImageProps, IconVariants {
-  alias: string;
-  theme: "original" | "dark" | "light";
+  // category: "chains" | "tokens" | "memes";
+  asset: string;
+  theme?: "original" | "dark" | "light";
 }
 
 export const BlockIcon = (props: BlockIconProps) => {
-  const { alias, shape, size, className, ...iconProps } = props;
+  const {
+    asset,
+    theme = "original",
+    shape,
+    size,
+    className,
+    ...iconProps
+  } = props;
 
   return (
     <img
       {...iconProps}
-      src={`${BASE_URL}/${props.theme}/${alias}.svg`}
-      alt={`${alias} icon`}
+      src={`${BASE_URL}/${theme}/${asset}.svg`}
+      alt={`${asset} icon`}
       className={cn(iconVariants({ shape, size }), className)}
     />
   );
