@@ -27,11 +27,11 @@ const iconVariants = tv({
 
 type ImageProps = ComponentProps<"img">;
 type IconVariants = VariantProps<typeof iconVariants>;
+type IconTheme = "original" | "dark" | "light";
 
-interface BlockIconProps extends ImageProps, IconVariants {
-  // category: "chains" | "tokens" | "memes";
-  asset: string;
-  theme?: "original" | "dark" | "light";
+interface BlockIconProps extends Omit<ImageProps, "src">, IconVariants {
+  asset: string | number;
+  theme?: IconTheme;
 }
 
 export const BlockIcon = (props: BlockIconProps) => {
@@ -41,15 +41,18 @@ export const BlockIcon = (props: BlockIconProps) => {
     shape,
     size,
     className,
-    ...iconProps
+    ...imgProps
   } = props;
 
   return (
     <img
-      {...iconProps}
       src={`${BASE_URL}/${theme}/${asset}.svg`}
       alt={`${asset} icon`}
+      data-shape={shape}
+      data-size={size}
+      data-theme={theme}
       className={cn(iconVariants({ shape, size }), className)}
+      {...imgProps}
     />
   );
 };
