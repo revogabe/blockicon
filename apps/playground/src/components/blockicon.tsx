@@ -8,12 +8,13 @@ const BASE_URL =
 type ImageProps = ComponentProps<"img">;
 type IconCategory = keyof typeof ALIASES;
 
-type AssetType<TCategory extends IconCategory> =
-  keyof (typeof ALIASES)[TCategory];
+type AssetType<TCategory extends IconCategory> = TCategory extends IconCategory
+  ? keyof (typeof ALIASES)[TCategory]
+  : never;
 
 interface BlockIconProps<TCategory extends IconCategory>
   extends Omit<ImageProps, "src"> {
-  asset: AssetType<IconCategory>;
+  asset: AssetType<TCategory>;
   category: TCategory;
   shape?: "circle" | "square";
   size?: "sm" | "md" | "lg" | "xl";

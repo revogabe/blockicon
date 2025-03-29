@@ -4,7 +4,7 @@ import { BlockIcon } from "./components/blockicon";
 function App() {
   return (
     <>
-      <BlockIcon asset="bitcoin" size="xl" />
+      <BlockIcon category="tokens" asset="usdc" size="xl" />
     </>
   );
 }
