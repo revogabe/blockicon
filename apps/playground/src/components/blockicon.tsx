@@ -1,23 +1,30 @@
 import { ComponentProps } from "react";
+import { ALIASES } from "../aliases";
 import { cn } from "../utils/cn";
 
 const BASE_URL =
   "https://blockicon-bucket.s3.us-west-1.amazonaws.com/blockicon/pre-alpha";
 
 type ImageProps = ComponentProps<"img">;
-type IconTheme = "original" | "dark" | "light";
+type IconCategory = keyof typeof ALIASES;
 
-interface BlockIconProps extends Omit<ImageProps, "src"> {
-  asset: string | number;
-  theme?: IconTheme;
+type AssetType<TCategory extends IconCategory> =
+  keyof (typeof ALIASES)[TCategory];
+
+interface BlockIconProps<TCategory extends IconCategory>
+  extends Omit<ImageProps, "src"> {
+  asset: AssetType<IconCategory>;
+  category: TCategory;
   shape?: "circle" | "square";
   size?: "sm" | "md" | "lg" | "xl";
 }
 
-export const BlockIcon = (props: BlockIconProps) => {
+export const BlockIcon = <TCategory extends IconCategory>(
+  props: BlockIconProps<TCategory>,
+) => {
   const {
     asset,
-    theme = "original",
+    category,
     shape = "circle",
     size = "md",
     className,
@@ -26,11 +33,11 @@ export const BlockIcon = (props: BlockIconProps) => {
 
   return (
     <img
-      src={`${BASE_URL}/${theme}/${asset}.svg`}
+      src={`${BASE_URL}/${category}/${asset}.svg`}
       alt={`${asset} icon`}
       data-shape={shape}
       data-size={size}
-      data-theme={theme}
+      data-category={category}
       className={cn("blockicon", className)}
       {...imgProps}
     />
