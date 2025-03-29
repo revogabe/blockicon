@@ -39,7 +39,6 @@ const s3 = new S3Client({
 /* Functions
 /* ---------------------------*/
 
-// Função para obter a lista de arquivos já no S3
 const getExistingFiles = async (): Promise<string[]> => {
   try {
     const response = await s3.send(
@@ -59,7 +58,6 @@ const uploadFile = async (filePath: string, s3Key: string): Promise<void> => {
       Bucket: BUCKET_NAME,
       Key: s3Key,
       Body: fileStream,
-      ACL: ObjectCannedACL.public_read,
       ContentType: "image/svg+xml",
     };
 
