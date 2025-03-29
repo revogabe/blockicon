@@ -60,6 +60,7 @@ const uploadFile = async (filePath: string, s3Key: string): Promise<void> => {
       Key: s3Key,
       Body: fileStream,
       ACL: ObjectCannedACL.public_read,
+      ContentType: "image/svg+xml",
     };
 
     await s3.send(new PutObjectCommand(uploadParams));

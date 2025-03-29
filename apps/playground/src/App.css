@@ -1,36 +1,36 @@
 .blockicon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  object-fit: contain;
-  overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    object-fit: contain;
+    overflow: clip;
 }
 
 .blockicon[data-shape="square"] {
-  border-radius: 6px;
+    border-radius: 6px;
 }
 
 .blockicon[data-shape="circle"] {
-  border-radius: 9999px;
+    border-radius: 9999px;
 }
 
 .blockicon[data-size="sm"] {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 }
 
 .blockicon[data-size="md"] {
-  width: 24px;
-  height: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 .blockicon[data-size="lg"] {
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 }
 
 .blockicon[data-size="xl"] {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
