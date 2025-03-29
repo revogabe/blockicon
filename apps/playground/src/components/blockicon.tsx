@@ -2,8 +2,7 @@ import { ComponentProps } from "react";
 import { ALIASES } from "../aliases";
 import { cn } from "../utils/cn";
 
-const BASE_URL =
-  "https://blockicon-bucket.s3.us-west-1.amazonaws.com/blockicon";
+const BASE_URL = "https://d3v6728skxiwy6.cloudfront.net/blockicon";
 
 type ImageProps = ComponentProps<"img">;
 type IconCategory = keyof typeof ALIASES;
