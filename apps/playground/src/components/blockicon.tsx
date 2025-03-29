@@ -3,7 +3,7 @@ import { ALIASES } from "../aliases";
 import { cn } from "../utils/cn";
 
 const BASE_URL =
-  "https://blockicon-bucket.s3.us-west-1.amazonaws.com/blockicon/pre-alpha";
+  "https://blockicon-bucket.s3.us-west-1.amazonaws.com/blockicon";
 
 type ImageProps = ComponentProps<"img">;
 type IconCategory = keyof typeof ALIASES;
@@ -32,10 +32,12 @@ export const BlockIcon = <TCategory extends IconCategory>(
     ...imgProps
   } = props;
 
+  const alias = ALIASES[category][asset];
+
   return (
     <img
-      src={`${BASE_URL}/${category}/${asset}.svg`}
-      alt={`${asset} icon`}
+      src={`${BASE_URL}/${category}/${alias}.svg`}
+      alt={`${alias} icon`}
       data-shape={shape}
       data-size={size}
       data-category={category}
