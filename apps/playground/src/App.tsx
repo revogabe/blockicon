@@ -4,10 +4,10 @@ import { BlockIcon } from "blockicon";
 function App() {
   return (
     <>
-      <BlockIcon category="network" chain="bitcoin" size="xl" />
-      <BlockIcon category="network" chain="ethereum" size="xl" />
-      <BlockIcon category="network" chain="solana" size="xl" />
-      <BlockIcon category="token" asset="usdc" size="xl" />
+      <BlockIcon category="network" chain="bitcoin" size="xl" shape="circle" />
+      <BlockIcon category="network" chain="ethereum" size="xl" shape="circle" />
+      <BlockIcon category="network" chain="solana" size="xl" shape="circle" />
+      <BlockIcon category="token" asset="usdc" size="xl" shape="circle" />
     </>
   );
 }

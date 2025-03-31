@@ -70,7 +70,7 @@ const uploadFile = async (filePath: string, s3Key: string): Promise<void> => {
 
 const syncFolder = async (): Promise<void> => {
   const existingFiles = await getExistingFiles();
-  const folders = ["networks", "tokens"];
+  const folders = ["network", "token"];
 
   for (const folder of folders) {
     const folderPath = path.join(LOCAL_FOLDER, folder);

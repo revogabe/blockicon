@@ -1,4 +1,4 @@
-import "../styles/index.css";
+import styles from "../styles/index.css";
 import { ALIASES } from "core";
 import { BlockIconProps } from "../types";
 
@@ -37,7 +37,7 @@ const BlockIcon = (props: BlockIconProps) => {
       data-shape={shape}
       data-size={size}
       data-category={category}
-      className={`blockicon ${className}`}
+      className={`blockicon ${styles} ${className}`}
       {...imgProps}
     />
   );
