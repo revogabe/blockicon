@@ -7,7 +7,8 @@
     "dev": "run-p dev:*",
     "dev:blockicon": "pnpm -F blockicon dev",
     "dev:playground": "pnpm -F playground dev",
-    "dev:core": "pnpm -F core dev"
+    "dev:core": "pnpm -F core dev",
+    "bucket:upload": "pnpm -F bucket upload"
   },
   "packageManager": "pnpm@10.7.0",
   "devDependencies": {
