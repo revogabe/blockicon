@@ -13,4 +13,5 @@ export default defineConfig({
   sourcemap: true,
   format: ["esm", "cjs"],
   minify: true,
+  injectStyle: true,
 });
