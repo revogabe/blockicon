@@ -1,30 +1,8 @@
 // import "./styles.css";
 import { ALIASES } from "core";
-import { ComponentProps } from "react";
+import { BlockIconProps } from "../types";
 
 const BASE_URL = "https://d3v6728skxiwy6.cloudfront.net/blockicon";
-
-type ImageProps = Omit<ComponentProps<"img">, "src">;
-
-type Aliases = typeof ALIASES;
-
-type Networks = keyof Aliases["network"];
-type Tokens = keyof Aliases["token"];
-
-type AssetProps = {
-  category?: "token";
-  asset: Tokens;
-};
-
-type NetworkProps = {
-  category?: "network";
-  chain: Networks;
-};
-
-type BlockIconProps = ImageProps & {
-  shape?: "circle" | "square";
-  size?: "sm" | "md" | "lg" | "xl";
-} & (AssetProps | NetworkProps);
 
 const BlockIcon = (props: BlockIconProps) => {
   let _props = {} as Omit<BlockIconProps, "chain" | "asset">;
