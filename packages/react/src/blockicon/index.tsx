@@ -43,4 +43,4 @@ const BlockIcon = (props: BlockIconProps) => {
   );
 };
 
-export { BlockIcon, type BlockIconProps };
+export { BlockIcon };
