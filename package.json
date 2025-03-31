@@ -3,9 +3,11 @@
   "private": true,
   "scripts": {
     "build": "pnpm -F blockicon build",
+    "build:core": "pnpm -F core build",
     "dev": "run-p dev:*",
     "dev:blockicon": "pnpm -F blockicon dev",
-    "dev:playground": "pnpm -F playground dev"
+    "dev:playground": "pnpm -F playground dev",
+    "dev:core": "pnpm -F core dev"
   },
   "packageManager": "pnpm@10.7.0",
   "devDependencies": {

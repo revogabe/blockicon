@@ -1,5 +1,6 @@
+// import "./styles.css";
+import { ALIASES } from "core";
 import { ComponentProps } from "react";
-import { ALIASES } from "./aliases/index";
 
 const BASE_URL = "https://d3v6728skxiwy6.cloudfront.net/blockicon";
 
@@ -25,7 +26,7 @@ type BlockIconProps = ImageProps & {
   size?: "sm" | "md" | "lg" | "xl";
 } & (AssetProps | NetworkProps);
 
-export const BlockIcon = (props: BlockIconProps) => {
+const BlockIcon = (props: BlockIconProps) => {
   let _props = {} as Omit<BlockIconProps, "chain" | "asset">;
 
   const alias = (() => {
@@ -63,3 +64,5 @@ export const BlockIcon = (props: BlockIconProps) => {
     />
   );
 };
+
+export { BlockIcon, type BlockIconProps };
