@@ -34,9 +34,9 @@ const BlockIcon = (props: BlockIconProps) => {
     <img
       src={`${BASE_URL}/${category}/${alias}.svg`}
       alt={`${alias} icon`}
+      data-category={category}
       data-shape={shape}
       data-size={size}
-      data-category={category}
       className={`blockicon ${className}`}
       {...imgProps}
     />

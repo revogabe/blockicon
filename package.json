@@ -4,9 +4,10 @@
   "scripts": {
     "build": "pnpm -F blockicon build",
     "build:core": "pnpm -F core build",
+    "build:website": "pnpm -F website build",
     "dev": "run-p dev:*",
     "dev:blockicon": "pnpm -F blockicon dev",
-    "dev:playground": "pnpm -F playground dev",
+    "dev:website": "pnpm -F website dev",
     "dev:core": "pnpm -F core dev",
     "bucket:upload": "pnpm -F bucket upload"
   },
