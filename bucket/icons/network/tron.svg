@@ -1,4 +1,11 @@
-<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="36" height="36" fill="#FF0013"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.24988 7.00428L16.9067 31.0043L30.361 14.8123L25.5977 10.3395L7.24988 7.00428ZM10.6733 8.91334L23.8985 11.3178L18.765 15.5427L10.6733 8.91334ZM9.75622 9.80629L18.1891 16.7154L16.8706 27.4892L9.75622 9.80629ZM25.3024 11.8088L28.1089 14.4444L20.4329 15.8176L25.3024 11.8088ZM19.4097 17.287L27.9099 15.7669L18.1601 27.5005L19.4097 17.287Z" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <g clip-path="url(#tron__a)">
+        <path fill="#C4342B" d="M24 0H0v24h24z"/>
+        <path fill="#fff" fill-rule="evenodd" d="M5.261 4.165a.5.5 0 0 1 .492-.15l10.58 2.59a.5.5 0 0 1 .176.082l2.153 1.57a.504.504 0 0 1 .12.687L11.374 19.78a.5.5 0 0 1-.887-.116L5.161 4.669a.5.5 0 0 1 .1-.503m1.746 2.705 3.697 10.41.609-5.394zm5.296 5.19-.618 5.488 5.23-7.653zm5.084-3.494-3.37 1.582 2.258-2.392zm-2.13-1.194L7.032 5.361l4.823 5.616z" clip-rule="evenodd"/>
+    </g>
+    <defs>
+        <clipPath id="tron__a">
+            <path fill="#fff" d="M0 0h24v24H0z"/>
+        </clipPath>
+    </defs>
 </svg>
