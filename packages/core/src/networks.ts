@@ -1,5 +1,3 @@
-// https://chainlist.org
-
 export const NETWORKS_ALIAS = {
   abstract: "abstract",
   2741: "abstract",
