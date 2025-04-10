@@ -6,12 +6,31 @@ import { Button } from "./ui/button";
 import { Command } from "./ui/command";
 import { frameworks, packagesManager, installCommand } from "@/mock";
 import { motion, Transition } from "motion/react";
+import { BlockIcon, type BlockIconProps } from "blockicon";
+import { delay } from "motion";
 
 const transition: Transition = {
   duration: 60,
   repeat: Infinity,
   ease: "linear",
 };
+
+type ChainType = Extract<BlockIconProps, { category: "network" }>["chain"];
+type IconsProps = {
+  chain: ChainType;
+  offset: number;
+};
+
+const icons = [
+  { chain: "bitcoin", offset: -100 },
+  { chain: "ethereum", offset: -80 },
+  { chain: "tron", offset: -60 },
+  { chain: "base", offset: -40 },
+  { chain: 56, offset: -20 },
+  { chain: "monad", offset: 0 },
+] as IconsProps[];
+
+const baseDuration = 60;
 
 export const Hero = () => {
   const [framework, setFramework] = useState("react");
@@ -48,37 +67,30 @@ export const Hero = () => {
               strokeLinecap="round"
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
-              transition={transition}
             />
           </svg>
 
-          <motion.div
-            style={iconPath}
-            initial={{ offsetDistance: "0%" }}
-            animate={{ offsetDistance: "100%" }}
-            transition={{ ...transition }}
-          />
+          {icons.map((icon, index) => {
+            const progress = 100 - icon.offset; // quanto ele vai percorrer
+            const duration = baseDuration * (progress / 100);
 
-          <motion.div
-            style={iconPath}
-            initial={{ offsetDistance: "20%" }}
-            animate={{ offsetDistance: "100%" }}
-            transition={{ ...transition }}
-          />
-
-          <motion.div
-            style={iconPath}
-            initial={{ offsetDistance: "0%" }}
-            animate={{ offsetDistance: "100%" }}
-            transition={{ ...transition }}
-          />
-
-          <motion.div
-            style={iconPath}
-            initial={{ offsetDistance: "20%" }}
-            animate={{ offsetDistance: "100%" }}
-            transition={{ ...transition }}
-          />
+            return (
+              <motion.div
+                key={index}
+                style={iconPath}
+                animate={{
+                  offsetDistance: [`${icon.offset}%`, "100%"],
+                }}
+                transition={{
+                  duration,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+              >
+                <BlockIcon size="lg" category="network" chain={icon.chain} />
+              </motion.div>
+            );
+          })}
         </div>
 
         <div className="flex flex-col gap-12 items-center justify-center">
@@ -114,10 +126,6 @@ export const Hero = () => {
 };
 
 const iconPath: React.CSSProperties = {
-  width: 50,
-  height: 50,
-  backgroundColor: "#4ff0b7",
-  borderRadius: 9999,
   position: "absolute",
   top: 0,
   left: 0,
