@@ -43,16 +43,27 @@ export const Hero = () => {
 
   return (
     <div className="w-full border-b border-zinc-900 mx-auto">
+      <motion.div
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0 }}
+        transition={{
+          duration: 1.8,
+          ease: "easeInOut",
+          delay: 0.1,
+        }}
+        className="bg-zinc-950 inset-0 fixed mx-auto z-[9999] pointer-events-none"
+      />
+
       <div className="relative container mx-auto min-h-[720px] border-x border-zinc-900 flex items-center justify-center">
         <Image
           src="/stars.svg"
           alt="Stars"
           layout="fill"
           objectFit="contain"
-          className="animate-pulse absolute inset-0"
+          className="animate-pulse absolute inset-0 pointer-events-none select-none"
         />
 
-        <div className="absolute inset-0 top-[60px]">
+        <div className="absolute inset-0 top-[60px] pointer-events-none select-none">
           <svg
             width="1534"
             height="448"

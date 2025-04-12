@@ -28,7 +28,7 @@ export default function RootLayout({
           width={1280}
           height={1280}
           objectFit="contain"
-          className="fixed right-0 top-0 z-50"
+          className="fixed right-0 top-0 z-50 pointer-events-none"
         />
         <Toaster position="bottom-right" />
         <div className="flex w-full border-b border-zinc-900">
