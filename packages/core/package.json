@@ -1,6 +1,6 @@
 {
   "name": "@blockicon/core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Core package for @blockicon/react",
   "type": "module",
   "main": "./dist/index.cjs",
