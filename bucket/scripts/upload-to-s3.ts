@@ -108,10 +108,19 @@ const syncFolders = async (subfolders: string[] = []): Promise<void> => {
 /* Execute Sync
 /* ---------------------------*/
 (async () => {
+	const startTime = performance.now();
+
 	try {
 		await syncFolders(["network", "token"]);
-		console.log("Sync complete");
+
+		const endTime = performance.now();
+		const durationMs = endTime - startTime;
+
+		console.log(`Sync complete in ${durationMs.toFixed(2)} ms`);
 	} catch (err) {
-		console.error("Sync failed:", err);
+		const endTime = performance.now();
+		const durationMs = endTime - startTime;
+
+		console.error(`Sync failed after ${durationMs.toFixed(2)} ms:`, err);
 	}
 })();
