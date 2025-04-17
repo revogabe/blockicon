@@ -21,8 +21,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/core
       '@blockicon/react':
-        specifier: ^0.0.6
-        version: 0.0.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: workspace:*
+        version: link:../../packages/react
       '@radix-ui/react-slot':
         specifier: ^1.1.2
         version: 1.1.2(@types/react@19.0.12)(react@19.1.0)
@@ -322,12 +322,6 @@ packages:
   '@babel/runtime@7.27.0':
     resolution: {integrity: sha512-VtPOkrdPHZsKc/clNqyi9WUA8TINkZ4cGk63UUE3u4pmB2k+ZMQRDuIOagv8UVd6j7k0T3+RRIb7beKTebNbcw==}
     engines: {node: '>=6.9.0'}
-
-  '@blockicon/react@0.0.6':
-    resolution: {integrity: sha512-FvXCxwx9+VKrKlnairCeyeV20JV+IZnAMbpC12I8xU+lhy4bvaD4xbTiNNANBtD5bJJie6+eKmWJh6Y7uzDyNg==}
-    peerDependencies:
-      react: ^19.1.0
-      react-dom: ^19.1.0
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -3466,12 +3460,6 @@ snapshots:
   '@babel/runtime@7.27.0':
     dependencies:
       regenerator-runtime: 0.14.1
-
-  '@blockicon/react@0.0.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
-    dependencies:
-      '@blockicon/core': link:packages/core
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
