@@ -11,7 +11,7 @@
     "dev:website": "pnpm -F website dev",
     "dev:core": "pnpm -F @blockicon/core dev",
     "bucket:upload": "pnpm -F bucket upload",
-    "publish": "pnpm publish -r --access public"
+    "blockicon:publish": "pnpm publish -r --access public"
   },
   "packageManager": "pnpm@10.7.0",
   "devDependencies": {
