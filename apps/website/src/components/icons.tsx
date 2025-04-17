@@ -2,7 +2,7 @@
 
 import { ChangeEvent, forwardRef, useState } from "react";
 import { cn } from "@/utils/cn";
-import { ALIASES } from "core";
+import { ALIASES } from "@blockicon/core";
 import { Components, VirtuosoGrid } from "react-virtuoso";
 import { matchSorter } from "match-sorter";
 import * as motion from "motion/react-client";

@@ -1,13 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { Button } from "./ui/button";
-import { Command } from "./ui/command";
-import { frameworks, packagesManager, installCommand } from "@/mock";
-import { motion, Transition } from "motion/react";
-import { BlockIcon, type BlockIconProps } from "blockicon";
-import { delay } from "motion";
 import { Icons } from "./icons";
 
 type Tab = {
@@ -53,7 +47,7 @@ export const Tabs = () => {
   return (
     <div className="w-full border-b border-zinc-900 mx-auto flex flex-col">
       <div className="relative container mx-auto border-x border-b border-zinc-900 flex items-center justify-between">
-        {tabs.map((item, index) => (
+        {tabs.map((item) => (
           <div
             key={item.id}
             aria-disabled={item.disabled}

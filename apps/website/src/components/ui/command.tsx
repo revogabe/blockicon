@@ -136,7 +136,7 @@ export const Command = (props: CommandProps) => {
         <Button
           onClick={(e) => {
             handleCopyToClipboard();
-            toast.custom((t) => (
+            toast.custom(() => (
               <div className="px-4 py-2 w-full flex items-center border border-zinc-800 bg-zinc-900 rounded-lg">
                 <p className="text-sm text-zinc-300">Copied to clipboard</p>
               </div>
