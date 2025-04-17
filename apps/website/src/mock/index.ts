@@ -7,8 +7,8 @@ export const frameworks: Framework[] = [
 export const packagesManager = ["pnpm", "npm", "yarn", "bun"];
 
 export const installCommand: Record<string, string> = {
-  reactpnpm: "pnpm add blockicon",
-  reactnpm: "npm install blockicon",
-  reactyarn: "yarn add blockicon",
-  reactbun: "bun add blockicon",
+  reactpnpm: "pnpm add @blockicon/react",
+  reactnpm: "npm install @blockicon/react",
+  reactyarn: "yarn add @blockicon/react",
+  reactbun: "bun add @blockicon/react",
 };
