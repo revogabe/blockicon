@@ -1,6 +1,6 @@
 {
   "name": "@blockicon/react",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "BlockIcon is an open-source library designed to make it easy to integrate cryptocurrency icons into websites and applications. Our goal is to provide a comprehensive and up-to-date set of icons for developers working with blockchain, exchanges, wallets, and other crypto platforms.",
   "type": "module",
   "main": "./dist/index.cjs",

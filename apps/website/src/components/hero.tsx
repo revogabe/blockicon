@@ -101,7 +101,7 @@ export const Hero = () => {
           <div className="flex flex-col items-center gap-2">
             <Button className="group rounded-full gap-2">
               <span>🎉</span>
-              <p>Release v1.0</p>
+              <p>Release v0.1.0</p>
             </Button>
             <h1 className="text-6xl font-semibold text-center leading-tight">
               Seamless Icon Integration <br />

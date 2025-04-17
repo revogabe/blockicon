@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     "react crypto icons",
     "blockchain UI",
     "open-source crypto icons",
-    "BlockIcon"
+    "BlockIcon",
   ],
   authors: [
     { name: "revogabe", url: "https://github.com/revogabe" },
-    { name: "joaom00", url: "https://github.com/joaom00" }
+    { name: "joaom00", url: "https://github.com/joaom00" },
   ],
   creator: "BlockIcon",
   openGraph: {
@@ -43,9 +43,8 @@ export const metadata: Metadata = {
     description:
       "Integrate beautiful crypto icons in seconds. Open-source, updated regularly, and perfect for any blockchain interface.",
     creator: "@revogabe",
-  }
+  },
 };
-
 
 export default function RootLayout({
   children,
