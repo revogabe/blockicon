@@ -2,7 +2,7 @@ import "../styles/index.css";
 import { ALIASES } from "@blockicon/core";
 import { BlockIconProps } from "../types";
 
-const BASE_URL = "https://d3v6728skxiwy6.cloudfront.net/blockicon";
+const BASE_URL = "https://s3.blockicon.dev/blockicon";
 
 const BlockIcon = (props: BlockIconProps) => {
   let _props = {} as Omit<BlockIconProps, "chain" | "asset">;

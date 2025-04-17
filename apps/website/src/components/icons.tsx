@@ -1,17 +1,21 @@
 "use client";
 
-import { ChangeEvent, forwardRef, useState } from "react";
+import { ChangeEvent, forwardRef, ReactNode, useState } from "react";
 import { cn } from "@/utils/cn";
 import { ALIASES } from "@blockicon/core";
 import { Components, VirtuosoGrid } from "react-virtuoso";
 import { matchSorter } from "match-sorter";
 import * as motion from "motion/react-client";
+import { BlockIcon } from "@blockicon/react";
 
 const sizes = ["sm", "md", "lg", "xl"] as const;
 const categories = ["token", "network"] as const;
 
 type Size = (typeof sizes)[number];
 type Category = (typeof categories)[number];
+
+type Networks = keyof (typeof ALIASES)["network"];
+type Tokens = keyof (typeof ALIASES)["token"];
 
 const uniqueNetworks = Array.from(new Set(Object.values(ALIASES.network)));
 const uniqueTokens = Array.from(new Set(Object.values(ALIASES.token)));
@@ -100,12 +104,22 @@ export const Icons = () => {
         data={filteredBySearch}
         components={{ List }}
         itemContent={(_index, icon) => (
-          <IconItem
-            key={icon}
-            icon={icon}
-            iconType="network"
-            size={selectedSize}
-          />
+          <IconItem key={icon} icon={icon}>
+            {selectedCategory === "network" && (
+              <BlockIcon
+                category="network"
+                chain={icon as Networks}
+                size={selectedSize}
+              />
+            )}
+            {selectedCategory === "token" && (
+              <BlockIcon
+                category="token"
+                asset={icon as Tokens}
+                size={selectedSize}
+              />
+            )}
+          </IconItem>
         )}
       />
     </div>
@@ -114,26 +128,16 @@ export const Icons = () => {
 
 type IconItemProps = {
   icon: string;
-  iconType: string;
-  size: Size;
+  children: ReactNode;
 };
 
-const IconItem = ({ icon, iconType, size, ...props }: IconItemProps) => {
+const IconItem = ({ icon, children, ...props }: IconItemProps) => {
   return (
     <div
       {...props}
       className="flex flex-col items-center px-4 py-2 border border-zinc-900 justify-center gap-4 w-full"
     >
-      <img
-        src={`https://d3v6728skxiwy6.cloudfront.net/blockicon/${iconType}/${icon}.svg`}
-        alt={icon}
-        className={cn("rounded-full", {
-          "size-6": size === "sm",
-          "size-8": size === "md",
-          "size-10": size === "lg",
-          "size-14": size === "xl",
-        })}
-      />
+      {children}
       <span className={cn("text-lg text-white")}>
         {icon
           .replace(/-/g, " ")
@@ -148,7 +152,7 @@ const IconItem = ({ icon, iconType, size, ...props }: IconItemProps) => {
 const List: Components["List"] = forwardRef((props, ref) => {
   const { children, ...divProps } = props;
   return (
-    <div {...divProps} ref={ref} className="grid grid-cols-4">
+    <div {...divProps} ref={ref} className="grid grid-cols-6">
       {children}
     </div>
   );
