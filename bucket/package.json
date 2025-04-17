@@ -1,8 +1,8 @@
 {
   "name": "bucket",
+  "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "upload": "ts-node scripts/upload-to-s3.ts"
   },
