@@ -8,6 +8,45 @@ BlockIcon is an open-source library designed to make it easy to integrate crypto
 ✅ Frequent updates with new icons  
 ✅ Open-source and free for the community  
 
+### Installation
+
+Install BlockIcon in your project with a single command:
+
+```bash
+pnpm add @blockicon/react
+```
+
+### How to use
+
+BlockIcon is simple and intuitive to integrate.
+
+```tsx
+import { BlockIcon } from '@blockicon/react'
+
+export default function Example() {
+    return <BlockIcon category="network" chain="ethereum" />
+}
+```
+
+### Component Props
+
+| Prop      | Type                        | Description                                                        |
+| --------- | ----------------------------|--------------------------------------------------------------------|
+| category  | `"network"` `"token"`           | The category of the icon, whether it is a network or a token       |
+| asset     | `string` `number`               | Present when category is token. Use token symbol, address or name. |
+| chain     | `string` `number`               | Present when category is network. Use the network name or chainId  |
+| shape     | `"circle"` `"square"`           | Icon shape                                                         |
+| size      | `"sm"` `"md"` `"lg"` `"xl"`         | Icon size                                                          |
+
+
+### Data Attributes
+
+| Attribute      | Value                       | 
+|----------------|-----------------------------|
+| data-category  | `"network"` `"token"`           | 
+| data-shape     | `"circle"` `"square"`           |
+| data-size      | `"sm"` `"md"` `"lg"` `"xl"`         | 
+
 ### 💡 How to Contribute?  
 We’re building BlockIcon with the community! If you’d like to contribute with icons, improvements, or suggestions, feel free to open a PR or issue.  
 

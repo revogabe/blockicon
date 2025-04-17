@@ -1,7 +1,7 @@
 {
   "name": "blockicon",
   "version": "0.0.1",
-  "description": "test",
+  "description": "BlockIcon is an open-source library designed to make it easy to integrate cryptocurrency icons into websites and applications. Our goal is to provide a comprehensive and up-to-date set of icons for developers working with blockchain, exchanges, wallets, and other crypto platforms.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -21,6 +21,8 @@
     }
   },
   "scripts": {
+    "prepublishOnly": "cp ../README.md . && pnpm build",
+    "postpublish": "rm README.md",
     "build": "tsup",
     "dev": "tsup --watch"
   },
