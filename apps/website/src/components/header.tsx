@@ -58,7 +58,7 @@ export const Header = () => {
           <Button asChild>
             <a
               target="_blank"
-              href="https://github.com/revogabe/blockicon"
+              href="https://www.npmjs.com/package/@blockicon/react"
               className="cursor-default"
             >
               <Image src="/brands/npm.svg" alt="Npm" width={20} height={20} />
