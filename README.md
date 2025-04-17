@@ -34,7 +34,7 @@ export default function Example() {
 | --------- | ----------------------------|--------------------------------------------------------------------|
 | category  | `"network"` `"token"`           | The category of the icon, whether it is a network or a token       |
 | asset     | `string` `number`               | Present when category is token. Use token symbol, address or name. |
-| chain     | `string` `number`               | Present when category is network. Use the network name or chainId  |
+| chain     | `string` `number`               | Present when category is network. Use network name or chainId  |
 | shape     | `"circle"` `"square"`           | Icon shape                                                         |
 | size      | `"sm"` `"md"` `"lg"` `"xl"`         | Icon size                                                          |
 
