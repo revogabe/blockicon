@@ -5,15 +5,8 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { Command } from "./ui/command";
 import { frameworks, packagesManager, installCommand } from "@/mock";
-import { motion, Transition } from "motion/react";
-import { BlockIcon, type BlockIconProps } from "blockicon";
-import { delay } from "motion";
-
-const transition: Transition = {
-  duration: 60,
-  repeat: Infinity,
-  ease: "linear",
-};
+import { motion } from "motion/react";
+import { BlockIcon, type BlockIconProps } from "@blockicon/react";
 
 type ChainType = Extract<BlockIconProps, { category: "network" }>["chain"];
 type IconsProps = {

@@ -1,6 +1,6 @@
 {
-  "name": "core",
-  "version": "0.0.1",
+  "name": "@blockicon/core",
+  "version": "0.0.2",
   "description": "test",
   "type": "module",
   "main": "./dist/index.cjs",

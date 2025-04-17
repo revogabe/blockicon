@@ -1,5 +1,5 @@
 import "../styles/index.css";
-import { ALIASES } from "core";
+import { ALIASES } from "@blockicon/core";
 import { BlockIconProps } from "../types";
 
 const BASE_URL = "https://d3v6728skxiwy6.cloudfront.net/blockicon";

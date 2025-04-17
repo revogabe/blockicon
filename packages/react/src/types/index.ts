@@ -1,4 +1,4 @@
-import { ALIASES } from "core";
+import { ALIASES } from "@blockicon/core";
 import { ComponentProps } from "react";
 
 type ImageProps = Omit<ComponentProps<"img">, "src">;
