@@ -2,14 +2,16 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "pnpm -F blockicon build",
-    "build:core": "pnpm -F core build",
+    "build": "run-s build:*",
+    "build:core": "pnpm -F @blockicon/core build",
+    "build:react": "pnpm -F @blockicon/react build",
     "build:website": "pnpm -F website build",
     "dev": "run-p dev:*",
-    "dev:blockicon": "pnpm -F blockicon dev",
+    "dev:blockicon": "pnpm -F @blockicon/react dev",
     "dev:website": "pnpm -F website dev",
-    "dev:core": "pnpm -F core dev",
-    "bucket:upload": "pnpm -F bucket upload"
+    "dev:core": "pnpm -F @blockicon/core dev",
+    "bucket:upload": "pnpm -F bucket upload",
+    "publish": "pnpm publish -r --access public"
   },
   "packageManager": "pnpm@10.7.0",
   "devDependencies": {
