@@ -23,4 +23,4 @@ type BlockIconProps = ImageProps & {
 
 /* ------ Exports ------ */
 
-export type { BlockIconProps };
+export type { BlockIconProps, Networks, Tokens };
