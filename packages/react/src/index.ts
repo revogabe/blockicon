@@ -1,2 +1,2 @@
 export { BlockIcon } from "./blockicon";
-export { type BlockIconProps } from "./types";
+export { type BlockIconProps, type Networks, type Tokens  } from "./types";
